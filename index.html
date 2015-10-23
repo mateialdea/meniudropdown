@@ -1,0 +1,206 @@
+<html>
+<head>
+
+<style>
+body
+		{
+			background-color: #f7efeb;
+			padding: 1.50em; 
+font: Arial;
+	width: 800px;
+	max-width: 96%;
+	margin: 0 auto;
+		}
+		
+form {
+position: relative;
+top: 20px;
+}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+
+input {
+ 
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+input[type=search] {
+	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+   box-shadow: 10px 10px 5px #888888;
+}
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+#search input[type=search] {
+	width: 15px;
+	padding-left: 10px;
+	color: transparent;
+	cursor: pointer;
+}
+#search input[type=search]:hover {
+	background-color: #fff;
+}
+#search input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#search input:-moz-placeholder {
+	color: transparent;
+}
+#search input::-webkit-input-placeholder {
+	color: transparent;
+}
+  
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+li:hover a {
+	background: #19c589;
+}
+
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+li ul {
+	display: none;
+}
+
+li ul li {
+	display: block;
+	float: none;
+}
+
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+@media screen and (max-width : 760px){
+	ul {
+		position: static;
+		display: none;
+	}
+	li {
+		margin-bottom: 1px;
+	}
+	ul li, li a {
+		width: 100%;
+	}
+	.show-menu {
+		display:block;
+	}
+}
+</style>
+</head>
+<body>
+	<label for="show-menu" class="show-menu">Show Menu</label>
+	<input type="checkbox" id="show-menu" role="button">
+		<ul id="menu">
+		<li><a href="#">Buton1</a></li>
+		<li>
+			<a href="#">Buton2</a>
+			<ul class="hidden">
+				<li><a href="#">Buton3</a></li>
+				<li><a href="#">Buton4</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Buton5</a>
+			<ul class="hidden">
+				<li><a href="#">Buton6</a></li>
+				<li><a href="#">Buton7</a></li>
+				<li><a href="#">Buton8</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Buton9</a></li>
+		<li><a href="#">Buton10</a></li>
+	</ul>
+	
+  <h3>Search</h3>
+<form id="search">
+	<input type="search" placeholder="Search">
+</form>
+
+</body>
+</html>
